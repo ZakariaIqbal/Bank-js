@@ -49,7 +49,7 @@
            <div class="col-md-6">
                 <div class="submit-area ">
                     <h4>Deposit</h4>
-                    <input type="text" class="form-control">
+                    <input id ="DepositAmount" type="text" class="form-control">
                     <br>
                 <button id = "addDeposit"class="btn btn-success">Deposit</button>
            </div>
@@ -78,7 +78,12 @@
       transaction.style.display="block";
     })
     //deposit button event handler
+    const Depositbtn = document.getElementById("addDeposit")
+    Depositbtn.addEventListener("click",function(){
+     const DepAmount = document.getElementById("DepositAmount").value 
+     const DepositNumber = parseFloat(DepAmmount);
 
+    })
 
 </script>
     
