@@ -34,7 +34,7 @@
             <div class="col-md-4 ">
                 <div class="withdraw status">
                     <h5>Withdraw</h5>
-                    <h2>$00</h2>
+                    <h2>$<span id = "CurrentWidthdraw">00</span></h2>
                 </div>
             </div>
             <div class="col-md-4 ">
@@ -87,7 +87,7 @@
                                                                         
         UpdateSpanText("CurrentDeposit",DepositNumber);
         UpdateSpanText("balanceAmount", DepositNumber);
-        document.getElementById("DepositAmount").value = " ";
+        document.getElementById("DepositTxt").value = "";
 
     })   
     //Withddraw btn event handler
@@ -96,7 +96,10 @@
 
         const WithdrawAmount = getInputNumber("withdrawTxt");
            
-    
+           UpdateSpanText("CurrentWidthdraw", WithdrawAmount);
+           UpdateSpanText("balanceAmount", -1 * WithdrawAmount)
+           
+           document.getElementById("withdrawTxt").value = "";
 
     })
 
