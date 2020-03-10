@@ -68,6 +68,7 @@
 
     </div>
 <script>
+    
     //Login button event holder
     const loginBtn = document.getElementById("login")
     loginBtn.addEventListener("click",function()
@@ -77,8 +78,10 @@
       const transaction = document.getElementById("transaction-area")
       transaction.style.display="block";
     })
-    //deposit button event handler     
-//Deposit Btn
+    //deposit & WidthDraw button event handler     
+    
+    //Deposit Btn
+
     const dipositBtn   = document.getElementById("addDeposit");
     dipositBtn.addEventListener ("click",function(){
                                                                          
@@ -90,7 +93,10 @@
         document.getElementById("DepositTxt").value = "";
 
     })   
-    //Withddraw btn event handler
+
+
+    //Withddraw btn 
+
     const withdrawBtn = document.getElementById("addwithdraw");
     withdrawBtn.addEventListener("click",function(){
 
@@ -98,19 +104,24 @@
            
            UpdateSpanText("CurrentWidthdraw", WithdrawAmount);
            UpdateSpanText("balanceAmount", -1 * WithdrawAmount)
-           
+           document.get
            document.getElementById("withdrawTxt").value = "";
 
     })
 
-    function getInputNumber(id){
+
+
+    function getInputNumber(id)
+    {
          const Txt = document.getElementById(id).value;
          const Amount = parseFloat(Txt);
          return Amount;
 
     }
    
-   //Current Deposit & Balance update   
+   
+
+
     function UpdateSpanText(id,DepositNumber)
     {
 
